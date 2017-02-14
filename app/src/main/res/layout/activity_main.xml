@@ -11,6 +11,7 @@
     tools:context="com.shenjianli.idapp.MainActivity">
 
     <TextView
+        android:id="@+id/scan_result_tv"
         android:text="Hello World!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

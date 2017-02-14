@@ -4,16 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import io.card.payment.CardIOActivity;
+import io.card.payment.CreditCard;
 
 public class MainActivity extends AppCompatActivity {
+
+    private final int MY_SCAN_REQUEST_CODE = 1988;
+
+    @Bind(R.id.scan_result_tv)
+    TextView scanResultTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
-    public void scan(View v){
+    public void scan(View v) {
         Intent scanIntent = new Intent(this, CardIOActivity.class);
 
         // customize these values to suit your needs.
@@ -52,12 +64,13 @@ public class MainActivity extends AppCompatActivity {
                 if (scanResult.postalCode != null) {
                     resultDisplayStr += "Postal Code: " + scanResult.postalCode + "\n";
                 }
-            }
-            else {
+            } else {
                 resultDisplayStr = "Scan was canceled.";
             }
             // do something with resultDisplayStr, maybe display it in a textView
             // resultTextView.setText(resultDisplayStr);
+            scanResultTv.setText(resultDisplayStr);
+
         }
         // else handle other activity results
     }
