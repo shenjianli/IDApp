@@ -10,16 +10,40 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.shenjianli.idapp.MainActivity">
 
-    <TextView
-        android:id="@+id/scan_result_tv"
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/id_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/id_scan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="扫描"
+            android:onClick="scan"/>
+
+        <EditText
+            android:id="@+id/id_content_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/id_scan_btn"
+            android:hint="@string/id_input_hint"/>
+    </RelativeLayout>
 
     <Button
+        android:id="@+id/id_query_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="扫描"
-        android:onClick="scan"/>
+        android:layout_below="@id/id_input_layout"
+        android:text="查询"/>
+
+    <TextView
+        android:id="@+id/scan_result_tv"
+        android:text=""
+        android:layout_below="@id/id_query_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
