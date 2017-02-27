@@ -8,7 +8,7 @@
 
     <!-- Permission to use camera - required -->
     <uses-permission android:name="android.permission.CAMERA" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- Camera features - recommended -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />

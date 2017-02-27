@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.shenjianli.shenlib.net.NetClient;
-import com.shenjianli.shenlib.net.RetrofitCallback;
+import com.shen.netclient.NetClient;
 
 import java.util.HashMap;
 import java.util.Map;
