@@ -1,7 +1,12 @@
 package com.shenjianli.idapp;
 
 /**
- * Created by edianzu on 2017/2/15.
+ * Created by shenjianli on 2017/2/15.
+ *
+ * area : 山西省临汾地区汾西县
+ * sex : 男
+ * birthday : 1988年04月05日
+ * verify :
  */
 public class ResultBean {
 
